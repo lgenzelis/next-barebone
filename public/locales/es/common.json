@@ -1,4 +1,5 @@
 {
+  "head": "next-i18next - Prueba de concepto",
   "h1": "Ejemplito",
   "interpolation-and-plurals": "Interpolación y plurales",
   "hello": "Buenas <1>{{user}}</1>! Tenés {{nMsgs}} mensaje sin leer",

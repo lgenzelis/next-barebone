@@ -8,11 +8,10 @@ export const Footer = () => {
   return (
     <footer>
       <p>
-        {t('description')}
+        {t`description`}
       </p>
       <p>
-        next-i18next v
-        {version}
+        next-i18next v{version}
       </p>
     </footer>
   )
