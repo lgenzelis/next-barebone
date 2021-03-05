@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { GetStaticProps } from 'next'
-import { useTranslation, Trans } from 'next-i18next'
+import { Trans, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useEffect, useState } from 'react'
 
@@ -16,7 +16,7 @@ const Homepage = () => {
   const user = 'Lucas'
 
   useEffect(() => {
-    const intervalId = setInterval(() => setNMsgs(n => (n+1)%5), 1500)
+    const intervalId = setInterval(() => setNMsgs((n) => (n + 1) % 5), 1500)
     return () => clearInterval(intervalId)
   }, [])
 
@@ -27,25 +27,15 @@ const Homepage = () => {
         <h3>{t`interpolation-and-plurals`}</h3>
         <span>
           <Trans t={t} i18nKey="hello" count={nMsgs}>
-            Hello <strong>{{user}}</strong>!
-            You have {{nMsgs}} unread message
+            Hello <strong>{{ user }}</strong>! You have {{ nMsgs }} unread message
           </Trans>
         </span>
         <div>
-          <Link
-            href='/'
-            locale={router.locale === 'en' ? 'es' : 'en'}
-          >
-            <button>
-              {t('change-locale')}
-            </button>
+          <Link href="/" locale={router.locale === 'en' ? 'es' : 'en'}>
+            <button>{t('change-locale')}</button>
           </Link>
-          <Link href='/second-page'>
-            <button
-              type='button'
-            >
-              {t('to-second-page')}
-            </button>
+          <Link href="/second-page">
+            <button type="button">{t('to-second-page')}</button>
           </Link>
         </div>
       </main>
@@ -56,7 +46,7 @@ const Homepage = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'footer']),
+    ...(await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'footer'])),
   },
 })
 

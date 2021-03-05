@@ -16,11 +16,9 @@ export const Header = ({ title }: HeaderProps) => {
       </Head>
       <h2>
         {t`head`}
-        <hr/>
+        <hr />
       </h2>
-      <h1>
-        {title}
-      </h1>
+      <h1>{title}</h1>
     </>
   )
 }

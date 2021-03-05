@@ -8,19 +8,14 @@ import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
 const SecondPage = () => {
-
   const { t } = useTranslation('second-page')
 
   return (
     <>
       <main>
         <Header title={t('h1')} />
-        <Link href='/'>
-          <button
-            type='button'
-          >
-            {t('back-to-home')}
-          </button>
+        <Link href="/">
+          <button type="button">{t('back-to-home')}</button>
         </Link>
       </main>
       <Footer />
@@ -30,7 +25,7 @@ const SecondPage = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'second-page', 'footer']),
+    ...(await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'second-page', 'footer'])),
   },
 })
 
