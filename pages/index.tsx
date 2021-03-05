@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import { GetStaticProps } from 'next'
 import { useTranslation, Trans } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useEffect, useState } from 'react'
 
+import { i18n as i18nConfig } from '../next-i18next.config'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { useEffect, useState } from 'react'
 
 const Homepage = () => {
   const router = useRouter()
@@ -53,9 +54,9 @@ const Homepage = () => {
   )
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common', 'footer']),
+    ...await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'footer']),
   },
 })
 

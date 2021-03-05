@@ -1,8 +1,9 @@
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
-
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { i18n as i18nConfig } from '../next-i18next.config'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
@@ -27,9 +28,9 @@ const SecondPage = () => {
   )
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['second-page', 'footer']),
+    ...await serverSideTranslations(locale ?? i18nConfig.defaultLocale, ['common', 'second-page', 'footer']),
   },
 })
 
