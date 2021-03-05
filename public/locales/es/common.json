@@ -1,0 +1,10 @@
+{
+  "h1": "Ejemplito",
+  "interpolation-and-plurals": "Interpolación y plurales",
+  "hello": "Buenas <1>{{user}}</1>! Tenés {{nMsgs}} mensaje sin leer",
+  "hello_plural": "Buenas <1>{{user}}</1>! Tenés {{nMsgs}} mensajes sin leer",
+  "change-locale": "Cambiar locale",
+  "to-second-page": "Página siguiente",
+  "error-with-status": "Un error ocurrió ({{statusCode}})",
+  "error-without-status": "Un error ocurrió"
+}
