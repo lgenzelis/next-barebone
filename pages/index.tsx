@@ -17,6 +17,7 @@ const Homepage = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => setNMsgs((n) => (n + 1) % 5), 1500)
+
     return () => clearInterval(intervalId)
   }, [])
 
