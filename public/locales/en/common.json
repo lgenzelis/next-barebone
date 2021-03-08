@@ -3,7 +3,7 @@
   "h1": "A simple example",
   "interpolation-and-plurals": "Interpolation and plurals",
   "hello": "Hey <1>{{user}}</1>! You have {{nMsgs}} unread message",
-  "hello_plural": "Heyyo <1>{{user}}</1>! You have {{nMsgs}} unread messages",
+  "hello_plural": "Hey <1>{{user}}</1>! You have {{nMsgs}} unread messages",
   "change-locale": "Change locale",
   "to-second-page": "To second page",
   "error-with-status": "A {{statusCode}} error occurred on server",
