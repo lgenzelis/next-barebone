@@ -1,6 +1,6 @@
 {
   "head": "next-i18next - Proof of concept",
-  "h1": "A simple example",
+  "title": "A simple example",
   "interpolation-and-plurals": "Interpolation and plurals",
   "hello": "Hey <1>{{user}}</1>! You have {{nMsgs}} unread message",
   "hello_plural": "Hey <1>{{user}}</1>! You have {{nMsgs}} unread messages",

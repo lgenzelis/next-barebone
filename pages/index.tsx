@@ -23,7 +23,7 @@ const Homepage = () => {
   return (
     <>
       <main>
-        <Header title={t('h1')} />
+        <Header title={t`title`} />
         <h3>{t`interpolation-and-plurals`}</h3>
         <div>
           <Trans t={t} i18nKey="hello" count={nMsgs}>
@@ -32,10 +32,10 @@ const Homepage = () => {
         </div>
         <div>
           <Link href="/" locale={router.locale === 'en' ? 'es' : 'en'}>
-            <a>{t('change-locale')}</a>
+            <a>{t`change-locale`}</a>
           </Link>{' '}
           <Link href="/second-page">
-            <a>{t('to-second-page')}</a>
+            <a>{t`to-second-page`}</a>
           </Link>
         </div>
       </main>
