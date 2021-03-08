@@ -25,17 +25,17 @@ const Homepage = () => {
       <main>
         <Header title={t('h1')} />
         <h3>{t`interpolation-and-plurals`}</h3>
-        <span>
+        <div>
           <Trans t={t} i18nKey="hello" count={nMsgs}>
             Hello <strong>{{ user }}</strong>! You have {{ nMsgs }} unread message
           </Trans>
-        </span>
+        </div>
         <div>
           <Link href="/" locale={router.locale === 'en' ? 'es' : 'en'}>
-            <button>{t('change-locale')}</button>
-          </Link>
+            <a>{t('change-locale')}</a>
+          </Link>{' '}
           <Link href="/second-page">
-            <button type="button">{t('to-second-page')}</button>
+            <a>{t('to-second-page')}</a>
           </Link>
         </div>
       </main>

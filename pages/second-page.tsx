@@ -15,7 +15,7 @@ const SecondPage = () => {
       <main>
         <Header title={t('h1')} />
         <Link href="/">
-          <button type="button">{t('back-to-home')}</button>
+          <a>{t('back-to-home')}</a>
         </Link>
       </main>
       <Footer />
